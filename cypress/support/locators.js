@@ -1,6 +1,7 @@
 export default {
     login: 
     {
+        'container':                      '.login-container',
         'user':                           'input[placeholder="Enter username"]',
         'password':                       'input[placeholder="Enter password"]',
         'submit':                         'button[type="submit"]',

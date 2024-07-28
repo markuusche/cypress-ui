@@ -8,7 +8,6 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       require('cypress-high-resolution')(on, config)
     },
-    testIsolation: false,
-
+    testIsolation: false
   },
 });

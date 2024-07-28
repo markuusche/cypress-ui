@@ -117,7 +117,7 @@ describe('Activity Logs', () => {
                 });
             }
             else {
-                cy.failing('User activities is less than 200.')
+                cy.failing('User activities is less than 200. Cannot validate entries.')
             }
         })
 

@@ -5,7 +5,7 @@ const username = Cypress.env('username')
 const password = Cypress.env('password')
 
 describe('Login Test', () => {
-  beforeEach(() => {
+  before(() => {
     cy.clearLocalStorage()
     cy.visit('/')
   })  
