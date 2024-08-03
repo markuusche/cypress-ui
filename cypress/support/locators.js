@@ -39,9 +39,9 @@ export default {
             'confirm-pass':               '#confirm_password',
             'update-btn':                 '.btn-success',
             'error-msg':                  '.form-error span',
-            'current-error':              '.mt-4 div:first-child .form-error span',
-            'new-error':                  '.mt-4 div:nth-child(2) .form-error span',
-            'confirm-error':              '.mt-4 div:last-child .form-error span'
+            'current-error':              '.mt-4 > div:first-child .form-error span',
+            'new-error':                  '.mt-4 > div:nth-child(2) .form-error span',
+            'confirm-error':              '.mt-4 > div:last-child .form-error span'
 
         },
         activity: 

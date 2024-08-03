@@ -38,17 +38,26 @@ Setting Up First Run on Your Local Machine
    ```
 
 2. Open a terminal inside your local clone of the repository.
-- Run cypress in headless mode
+3. Install dependencies: <br>
 
-    ```
-     npx cypress run
-    ```
-
-- Run cypress in headless mode with your chosen browser (chrome, firefox, edge)
-
+   Cypress
+     
+   ```bash
+   npm install cypress --save-dev
    ```
-   npx cypress run --browser chrome
+   Faker
    ```
-   
+   npm install @faker-js/faker --save-dev
+   ```
+
+Run cypress in headless mode
+  ```
+  npx cypress run
+  ```
+Run cypress in headless mode with your chosen browser (chrome, firefox, edge)
+  ```
+  npx cypress run --browser chrome
+  ```
+
 </br>
 

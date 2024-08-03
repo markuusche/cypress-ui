@@ -1,0 +1,36 @@
+name: Cypress UI Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Cypress:
+    runs-on: ubuntu-latest
+
+    env:
+      cybase: ${{ secrets.xyz }}
+      cypress_username: ${{ secrets.username }}
+      cypress_password: ${{ secrets.password }}
+      cypress_passwords: ${{ secrets.passwords }}
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node JS
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: |
+          npm install cypress --save-dev
+          npm install @faker-js/faker --save-dev
+          npm i -D cypress-high-resolution
+ 
+      - name: Run Test
+        run: npx cypress run
+
+  
