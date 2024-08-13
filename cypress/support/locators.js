@@ -44,6 +44,7 @@ export default {
             'confirm-error':              '.mt-4 > div:last-child .form-error span'
 
         },
+
         activity: 
         {
             'tab':                        '.tabContainer a:last-child',
@@ -52,6 +53,30 @@ export default {
             'preloader':                  '.preloader img',
             'rows':                       '#tableBody tr',
             'total':                      '.table-showing span:last-child'
+        }
+
+    },
+    
+    report: 
+    {
+        'containter':                     '.nav-container:first-of-type span',
+        'betting-history':                '.nav-container:first-of-type a:first-child',
+        'transfer-history':               '',
+        'player-cashflow':                '',
+        'promo-report':                   '',
+        'game-report':                    '',
+        'operator-summary':               '',
+        'vendor-summary':                 '',
+        'player-summary':                 '',
+        'sports-betting':                 '',
+        
+        filter:
+        {
+            'search':                     '',
+            'reset':                      '',
+            'transaction-date':           '.form_inputs:first-of-type .dp__input_wrap input',
+            'today':                      'div.items-start:first-child .presetDatesLabel',
+            'operator':                   ''
         }
 
     }
