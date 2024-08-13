@@ -59,7 +59,8 @@ export default {
     
     report: 
     {
-        'containter':                     '.nav-container:first-of-type span',
+        'report':                         '.nav-container:first-of-type span',
+        'containter':                     '.nav-container:first-child',
         'betting-history':                '.nav-container:first-of-type a:first-child',
         'transfer-history':               '',
         'player-cashflow':                '',
@@ -72,11 +73,15 @@ export default {
         
         filter:
         {
-            'search':                     '',
-            'reset':                      '',
+            'search':                     'button[type="submit"]',
+            'reset':                      'button[type="reset"]',
             'transaction-date':           '.form_inputs:first-of-type .dp__input_wrap input',
+            'date-modal':                 'div.dp__menu',
             'today':                      'div.items-start:first-child .presetDatesLabel',
-            'operator':                   ''
+            'operator':                   'div.form_inputs:nth-child(2) input',
+            'operator-dropdown':          'div.ant-select-dropdown',
+            'operator-name':              'div.filter-node .ant-select-tree-title',
+            'parent-operator':            '.ant-select-tree-treenode:nth-of-type(1) .anticon'
         }
 
     }

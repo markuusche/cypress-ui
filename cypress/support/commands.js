@@ -1,13 +1,16 @@
 import locators from '../support/locators.js'
 
-Cypress.Commands.add('login', (username, password) => {
-    cy.session([username, password], () => {
+const username = Cypress.env('username')
+const password = Cypress.env('password')
+
+Cypress.Commands.add('login', (user=username, pass=password) => {
+    cy.session([user, pass], () => {
         cy.visit('/')
         cy.get(locators.login['container']).should('be.visible')
-        cy.get(locators.login['user']).type(username)
-        cy.get(locators.login['password']).type(password)
+        cy.get(locators.login['user']).type(user)
+        cy.get(locators.login['password']).type(pass)
         cy.get(locators.login['submit']).click()
-        cy.get(locators.home['welcome']).should('include.text', `Welcome,${username}!`)
+        cy.get(locators.home['welcome']).should('include.text', `Welcome,${user}!`)
     })
 })
 

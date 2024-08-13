@@ -11,6 +11,7 @@ jobs:
 
     env:
       cybase: ${{ secrets.xyz }}
+      cypress_type: ${{ secrets.type }}
       cypress_username: ${{ secrets.username }}
       cypress_password: ${{ secrets.password }}
       cypress_passwords: ${{ secrets.passwords }}

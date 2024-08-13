@@ -5,13 +5,9 @@
 import { faker } from '@faker-js/faker'
 import locators from '../support/locators.js'
 
-const username = Cypress.env('username')
-const password = Cypress.env('password')
-
 describe('Profile Test General', () => {
     before(() => {
-        cy.login(username, password)
-    })
+        cy.login()})
 
     it('Profile Settings', ()=>{
         cy.visit('/')
@@ -44,6 +40,7 @@ describe('Profile Test General', () => {
 
 describe('Change Password Test Security', () => {
 
+    const password = Cypress.env('password')
     const passEnv = Cypress.env('passwords')
     const passwords = passEnv.split(':')
     const selectPassword = Math.floor(Math.random() * passwords.length)
