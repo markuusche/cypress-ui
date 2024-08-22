@@ -81,7 +81,20 @@ export default {
             'operator':                   'div.form_inputs:nth-child(2) input',
             'operator-dropdown':          'div.ant-select-dropdown',
             'operator-name':              'div.filter-node .ant-select-tree-title',
-            'parent-operator':            '.ant-select-tree-treenode:nth-of-type(1) .anticon'
+            'parent-operator':            '.ant-select-tree-treenode:nth-of-type(1) .anticon',
+            'transactionId':              '#transaction_id',
+            'playerId':                   '#player_id',
+            'gameName':                   '#game_name',
+            'roundId':                    '#game_round',
+            'gameId':                     '#game_id'
+        },
+
+        table: {
+            'transactionId':              '#tableBody > tr:first-child > td:nth-child(4)',
+            'playerId':                   '#tableBody > tr:first-child > td:nth-child(6)',
+            'gameName':                   '#tableBody > tr:first-child > td:nth-child(20)',
+            'roundId':                    '#tableBody > tr:first-child > td:nth-child(12)',
+            'gameId':                     '#tableBody > tr:first-child > td:nth-child(18)'
         }
 
     }

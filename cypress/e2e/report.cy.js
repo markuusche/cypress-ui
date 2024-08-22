@@ -27,5 +27,23 @@ describe('Reporting Test', () => {
             }
         })
         cy.get(locators.report.filter['search']).click()
+        cy.get(locators.profile.activity['preloader']).should('be.visible')
+        cy.get(locators.profile.activity['preloader'], { timeout: 100000 }).should('not.be.visible')
+        cy.get(locators.profile.activity['rows']).then((rows) => {
+            const count = rows.length;
+            if (count >= 1) {
+                const table = locators.report.table
+                for (const key in table) {
+                    cy.get(locators.report.table[key]).then(element => {
+                    cy.get(locators.report.filter[key]).type(element.text())
+                    cy.get(locators.report.filter['search']).click()
+                    cy.get(locators.profile.activity['preloader']).should('be.visible')
+                    cy.get(locators.profile.activity['preloader'], { timeout: 100000 }).should('not.be.visible')
+                    cy.get(locators.report.table[key]).contains(element.text())
+                    cy.get(locators.report.filter[key]).clear()
+                    })
+                }
+            }   
+        })
     })
 })
