@@ -14,9 +14,9 @@ describe('Reporting Test', () => {
         cy.get(locators.report['report']).click()
         cy.get(locators.report['containter']).should('be.visible')
         cy.get(locators.report['betting-history']).click()
-        cy.get(locators.report.filter['transaction-date']).click()
+        cy.get(locators.report.filter['date-selection']).click()
         cy.get(locators.report.filter['date-modal']).should('be.visible')
-        cy.get(locators.report.filter['today']).click()
+        cy.get(locators.report.filter['yesterday']).click()
         cy.get(locators.report.filter['operator']).type(operator)
         cy.get(locators.report.filter['operator-dropdown']).should('be.visible')
         cy.get(locators.report.filter['parent-operator']).click()
@@ -35,12 +35,12 @@ describe('Reporting Test', () => {
                 const table = locators.report.table
                 for (const key in table) {
                     cy.get(locators.report.table[key]).then(element => {
-                    cy.get(locators.report.filter[key]).type(element.text())
-                    cy.get(locators.report.filter['search']).click()
-                    cy.get(locators.profile.activity['preloader']).should('be.visible')
-                    cy.get(locators.profile.activity['preloader'], { timeout: 100000 }).should('not.be.visible')
-                    cy.get(locators.report.table[key]).contains(element.text())
-                    cy.get(locators.report.filter[key]).clear()
+                        cy.get(locators.report.filter[key]).type(element.text())
+                        cy.get(locators.report.filter['search']).click()
+                        cy.get(locators.profile.activity['preloader']).should('be.visible')
+                        cy.get(locators.profile.activity['preloader'], { timeout: 100000 }).should('not.be.visible')
+                        cy.get(locators.report.table[key]).contains(element.text())
+                        cy.get(locators.report.filter[key]).clear()
                     })
                 }
             }   

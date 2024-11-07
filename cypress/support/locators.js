@@ -76,8 +76,9 @@ export default {
             'search':                     'button[type="submit"]',
             'reset':                      'button[type="reset"]',
             'transaction-date':           '.form_inputs:first-of-type .dp__input_wrap input',
+            'date-selection':             'form .form_inputs:first-child .dp__input_wrap',
             'date-modal':                 'div.dp__menu',
-            'today':                      'div.items-start:first-child .presetDatesLabel',
+            'yesterday':                  'div.items-start:nth-child(2) .presetDatesLabel',
             'operator':                   'div.form_inputs:nth-child(2) input',
             'operator-dropdown':          'div.ant-select-dropdown',
             'operator-name':              'div.filter-node .ant-select-tree-title',
@@ -92,9 +93,9 @@ export default {
         table: {
             'transactionId':              '#tableBody > tr:first-child > td:nth-child(4)',
             'playerId':                   '#tableBody > tr:first-child > td:nth-child(6)',
-            'gameName':                   '#tableBody > tr:first-child > td:nth-child(20)',
+            'gameName':                   '#tableBody > tr:first-child > td:nth-child(21)',
             'roundId':                    '#tableBody > tr:first-child > td:nth-child(12)',
-            'gameId':                     '#tableBody > tr:first-child > td:nth-child(18)'
+            'gameId':                     '#tableBody > tr:first-child > td:nth-child(19)'
         }
 
     }
